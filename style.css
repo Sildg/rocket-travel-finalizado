@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --color-text: #f1f1f1;
+  --color-highlight: #ff7500;
+  --color-button: #3636e4
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-image: url('/assets/background.jpeg') ;
+  margin: 0 auto;
+  max-width: 1080px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: var(--color-text);
+}
+.container{
+  margin: 2rem;
+}
+
+header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul{
+  display: flex;
+  gap: 2rem;
+}
+
+li{
+  list-style: none;
+}
+
+header .logo img{
+  width: 3rem;
+  height: 3rem;
+  filter: drop-shadow(30px 10px 4px #000);
+}
+
+header ul li a{
+  font-size: .9rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.menu a:hover{
+  color: var(--color-highlight);
+  border-bottom: 1px solid var(--color-button)
+}
+
+button{
+  border: none;
+  background-color: var(--color-button);
+  color: var(--color-text);
+  border-radius:.5rem;
+  padding: .8rem 1.6rem;
+  
+}
+button a{
+  color: var(--color-text);
+  outline: none;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+main{
+padding-top: 10rem;
+}
+
+.top-main{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.top-main h3{
+  padding-top:2rem;
+  max-width:70%;
+  margin: 0 auto;
+  filter: brightness(.9);
+  font-weight: 400;
+  font-size: 1rem;
+  padding-bottom: 2rem;
+}
+
+.bottom-main{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search{
+  background: white;
+  opacity:0.9;
+  border-radius: 1rem;
+  width: 70%;
+  padding: 1.5rem;
+  display:flex;
+  justify-content: space-evenly;
+
+}
+
+select{
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+label{
+  color: black;
+  padding-bottom: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+#hotel, #locations, #range{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.button-search{
+  padding: 2rem;
+  opacity: 0.9
+}
+
+
+@media screen and (max-width: 650px){
+  body{
+    background-size: cover;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header img {
+    display: none;
+  }
+  header button {
+    margin-top: 2rem;
+
+  }
+  main {
+  padding-top: 2.3rem;
+  }
+
+  .search{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  select {
+    margin-bottom: 1rem;
+  }
+
+  .bottom-main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #button-search{
+    padding: 1.5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #button-search::after{
+    content:'Pesquisar'
+  }
+  #button-search img{
+    padding-right:1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
